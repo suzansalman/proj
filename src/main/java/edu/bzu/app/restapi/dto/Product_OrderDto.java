@@ -4,16 +4,17 @@ import lombok.Data;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.util.Date;
 
 @Data
 
-public class CustomerDto {
-    private Integer id;
+public class Product_OrderDto {
 
     @NotNull
     @Size(min = 3, max = 250)
-    private String firstName;
-    private String lastName;
-    private Date bornAt;
+    private Integer productId;
+    private Integer orderId;
+    private Integer quantity;
+    private Long price;
+    private Long vat;
+
 }

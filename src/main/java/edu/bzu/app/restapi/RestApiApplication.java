@@ -1,7 +1,6 @@
 package edu.bzu.app.restapi;
 
-import edu.bzu.app.restapi.dto.CategoryDto;
-import edu.bzu.app.restapi.service.CategoryService;
+import edu.bzu.app.restapi.service.OrderService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,7 +20,7 @@ public class RestApiApplication {
 
 
     @Bean
-    CommandLineRunner runner(CategoryService categoryService) {
+    CommandLineRunner runner(OrderService categoryService) {
         return args -> {
             try {
                 CategoryDto instance;

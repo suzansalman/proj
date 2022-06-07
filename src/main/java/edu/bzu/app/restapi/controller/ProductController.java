@@ -1,7 +1,5 @@
 package edu.bzu.app.restapi.controller;
 
-import edu.bzu.app.restapi.dto.CustomerDto;
-import edu.bzu.app.restapi.exceptions.BadRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -12,13 +10,13 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/e-commerce/Customer")
-public class CustomerController<CustomerServices> {
-    private final Logger log = LoggerFactory.getLogger(CustomerController.class);
+@RequestMapping("/e-commerce/customer")
+public class ProductController {
+    private final Logger log = LoggerFactory.getLogger(ProductController.class);
 
     private CustomerServices customerServices;
 
-    public CustomerController(CustomerServices customerServices){
+    public ProductController(CustomerServices customerServices){
         this.customerServices=customerServices;
     }
     @GetMapping // get the information from the database
